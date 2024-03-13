@@ -9,7 +9,9 @@ public class App {
     }
     static void skriv_ut_array(int[] array){
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            if (array[i]>8) {
+                System.out.println(array[i]);
+            }
         }
     }
 }
