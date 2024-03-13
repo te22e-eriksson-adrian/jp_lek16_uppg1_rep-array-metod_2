@@ -7,18 +7,21 @@ public class App {
         System.out.println();
         skriv_ut_array(fält);
         System.out.println();
-        antal_över_8(fält);
+        int svar = antal_över_8(fält);
+        System.out.println("Antal värden som är mer än 8: "+svar);
     }
     static void skriv_ut_array(int[] array){
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
-    static void antal_över_8(int[]arrayen){
-        for (int j = 0; j < arrayen.length; j++) {
-            if (arrayen[j]>8) {
-                System.out.println(arrayen[j]);
+    static int antal_över_8(int[]array){
+        int antal_värden = 0;
+        for (int j = 0; j < array.length; j++) {
+            if (array[j]>8) {
+                antal_värden++;
             }
         }
+        return antal_värden;
     }
 }
