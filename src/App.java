@@ -4,5 +4,12 @@ public class App {
         for (int i = 0; i < fält.length; i++) {
             System.out.println(fält[i]);
         }
+        System.out.println();
+        skriv_ut_array(fält);
+    }
+    static void skriv_ut_array(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 }
