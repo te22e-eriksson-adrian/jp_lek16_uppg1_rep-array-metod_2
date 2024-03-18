@@ -17,6 +17,14 @@ public class App {
         tangentbord.nextLine();
         int svar2 = hitta_tal(fält, tal1);
         System.out.println("Index för talet (om talet inte hittades = -1): "+svar2);
+        System.out.print("Fyll in index där talet finns: ");
+        int indexTal1 = tangentbord.nextInt();
+        tangentbord.nextLine();
+        System.out.print("Fyll in index för dit talet ska flyttas: ");
+        int indexTal2 = tangentbord.nextInt();
+        tangentbord.nextLine();
+        byta_plats(fält, indexTal1, indexTal2);
+        skriv_ut_array(fält);
         tangentbord.close();
     }
     static void skriv_ut_array(int[] array){
@@ -44,5 +52,13 @@ public class App {
             index_tal = -1;
         }
         return index_tal;
+    }
+    static void byta_plats(int[] array, int index1, int index2){
+        int byte1 = array[index1];
+        int byte2 = array[index2];
+        array[index1] = 0;
+        array[index2] = 0;
+        array[index2] = byte1;
+        array[index1] = byte2;
     }
 }
