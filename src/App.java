@@ -24,7 +24,8 @@ public class App {
         int indexTal2 = tangentbord.nextInt();
         tangentbord.nextLine();
         byta_plats(fält, indexTal1, indexTal2);
-        skriv_ut_array(fält);
+        System.out.println();
+        nollställ_array(fält);
         tangentbord.close();
     }
     static void skriv_ut_array(int[] array){
@@ -60,5 +61,12 @@ public class App {
         array[index2] = 0;
         array[index2] = byte1;
         array[index1] = byte2;
+        skriv_ut_array(array);
+    }
+    static void nollställ_array(int[] array){
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 0;
+        }
+        skriv_ut_array(array);
     }
 }
